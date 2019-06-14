@@ -26,5 +26,5 @@ ENV PATH $PATH:$SONARQUBE_SCANNER_BIN
 COPY launch.sh /
 
 WORKDIR ${SONARQUBE_SCANNER_HOME}
-RUN chmod +x launch.sh
+RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/launch.sh"]
