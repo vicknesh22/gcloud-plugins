@@ -21,8 +21,13 @@ RUN apk update \
 
 ENV PATH $PATH:$SONARQUBE_SCANNER_BIN
 
-COPY launch.sh /
+RUN ls -la
 
+COPY launch.sh /
+RUN ls -la
 WORKDIR ${SONARQUBE_SCANNER_HOME}
+RUN ls -la
 RUN chmod +x entrypoint.sh
+RUN ls -la
 ENTRYPOINT ["/launch.sh"]
+
